@@ -1,0 +1,45 @@
+@import '../../_settings/_var.css';
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* size */
+.none {
+    border: 0;
+    padding: 0;
+}
+
+.small {
+    padding: 5px 10px;
+}
+
+.medium {
+    
+}
+
+.large {
+    padding: 25px 37px;
+}
+
+/* theme */
+.text-point {
+    font-size: var(--size-18);
+    font-weight: var(--weight-700);
+    color: var(--color-1);
+}
+
+.text {
+    font-size: var(--size-18);
+    font-weight: var(--weight-400);
+    color: var(--color-1);
+}
+
+.gnb-btn {
+    margin-right: 62px;
+}
