@@ -11,9 +11,11 @@ function App() {
     <div className="App">
       <Router>
         <GNB />
-        <Routes>
-          <Route exact path="/" element={<Project_main/>} />
-        </Routes>
+        <div className="App-contents">
+          <Routes>
+            <Route exact path="/" element={<Project_main/>} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );

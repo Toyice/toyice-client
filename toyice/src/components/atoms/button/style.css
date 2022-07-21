@@ -7,39 +7,54 @@
     border-radius: 60px;
     cursor: pointer;
     background-color: transparent;
+    border: 0;
 }
 
 /* size */
-.none {
+.button-none {
     border: 0;
     padding: 0;
 }
 
-.small {
+.button-small {
     padding: 5px 10px;
 }
 
-.medium {
+.button-medium {
     
 }
 
-.large {
+.button-large {
     padding: 25px 37px;
 }
 
 /* theme */
-.text-point {
+.button-text-point {
     font-size: var(--size-18);
     font-weight: var(--weight-700);
     color: var(--color-1);
 }
 
-.text {
+.button-text {
     font-size: var(--size-18);
     font-weight: var(--weight-400);
     color: var(--color-1);
 }
 
+.button-point {
+    font-size: var(--size-20);
+    font-weight: var(--weight-700);
+    color: var(--color-4);
+    background-color: var(--color-point);
+}
+
+/* className */
 .gnb-btn {
     margin-right: 62px;
+}
+
+.main-header-btn {
+    height: 60px;
+    float: right;
+    margin-top: 47.87px;
 }

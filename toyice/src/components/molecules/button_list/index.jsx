@@ -10,8 +10,8 @@ const button_list = (props) => {
     return (
         <div className={className}>
         {data.map( (btn_text, i) => btn_text !== '프로젝트' ?
-            <Button className={'gnb-btn'} theme={'text'} size={'none'} key={i}>{btn_text}</Button> :
-            <Button className={'gnb-btn'} theme={'text-point'} size={'none'} key={i}>{btn_text}</Button>
+            <Button className={'gnb-btn'} theme={'button-text'} size={'button-none'} key={i}>{btn_text}</Button> :
+            <Button className={'gnb-btn'} theme={'button-text-point'} size={'button-none'} key={i}>{btn_text}</Button>
         )}
         </div>
     );

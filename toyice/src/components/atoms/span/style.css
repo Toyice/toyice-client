@@ -1,0 +1,47 @@
+.span {
+    font-weight: 400;
+}
+
+
+/* size */
+.span-xsmall {
+    font-size: var(--size-15);
+}
+
+.span-small {
+    font-size: var(--size-18);
+}
+
+.span-medium {
+    font-size: var(--size-20);
+}
+
+.span-large {
+    font-size: var(--size-30);
+}
+
+.span-xlarge {
+    font-size: var(--size-40);
+}
+
+
+/* color */
+.span-point {
+    color: var(--color-point);
+}
+
+.span-color1 {
+    color: var(--color-1);
+}
+
+.span-color2 {
+    color: var(--color-2);
+}
+
+.span-color3 {
+    color: var(--color-3);
+}
+
+.span-color4 {
+    color: var(--color-4);
+}

@@ -1,0 +1,24 @@
+.img-stone {
+    position: absolute;
+}
+
+.orange {
+    left: 0%;
+    right: 25.13%;
+    top: 0%;
+    bottom: 39.64%;
+}
+
+.yellow {
+    left: 45.41%;
+    right: 8.08%;
+    top: 49.9%;
+    bottom: 3.18%;
+}
+
+.blue {
+    left: 6%;
+    right: 57.72%;
+    top: 68.72%;
+    bottom: 0%;
+}

@@ -10,17 +10,17 @@ export const btn_type = {
 }
 
 export const btn_size = {
-    NONE: 'none',
-    SMALL: 'small',
-    MEDIUM: 'medium',
-    LARGE: 'large',
+    NONE: 'button-none',
+    SMALL: 'button-small',
+    MEDIUM: 'button-medium',
+    LARGE: 'button-large',
 }
 
 export const btn_theme = {
-    TEXT_POINT: 'text-point',
-    TEXT: 'text',
-    POINT: 'point',
-    REVIEW: 'review',
+    TEXT_POINT: 'button-text-point',
+    TEXT: 'button-text',
+    POINT: 'button-point',
+    REVIEW: 'button-review',
 }
 
 const Button = ( props ) => {
