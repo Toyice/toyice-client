@@ -1,0 +1,7 @@
+.project-main-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 105px;
+    grid-row-gap: 60px;
+}

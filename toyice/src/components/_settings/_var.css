@@ -1,0 +1,21 @@
+:root {
+    /* color */
+    --color-point: #EC6536;
+    --color-1: #000000;
+    --color-2: #B3B3B3;
+    --color-3: #C2C2C2;
+    --color-4: #FFFFFF;
+    --color-blue: #6CB0F7;
+    --color-yellow: #F7D04D;
+
+    /* text */
+    --size-40: 40px;
+    --size-30: 30px;
+    --size-20: 20px;
+    --size-18: 18px;
+    --size-15: 15px;
+
+    --weight-700: 700;
+    --weight-400: 400;
+
+}

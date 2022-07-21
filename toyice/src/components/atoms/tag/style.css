@@ -1,0 +1,18 @@
+/* color */
+.tag-color1 {
+    color: var(--color-4);
+}
+
+
+/* bgcolor */
+.tag-blue {
+    background-color: var(--color-blue);
+}
+
+.tag-yellow {
+    background-color: var(--color-yellow);
+}
+
+.tag-orange {
+    background-color: var(--color-point);
+}

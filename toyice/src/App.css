@@ -1,0 +1,11 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body {
+    margin: 0;
+    font-family: Pretendard;
+    font-style: normal;
+}
+
+.App-contents {
+    padding: 0px 15.6% 0px 15.6%;
+}
