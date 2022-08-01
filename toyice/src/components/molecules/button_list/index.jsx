@@ -2,17 +2,16 @@ import React from 'react';
 
 import Button from '../../atoms/button';
 
+import logo from '../../../assets/svg/logo.svg';
 import './style.css'
 
 const button_list = (props) => {
-    const { data, className } = props;
-
     return (
-        <div className={className}>
-        {data.map( (btn_text, i) => btn_text !== '프로젝트' ?
-            <Button className={'gnb-btn'} theme={'button-text'} size={'button-none'} key={i}>{btn_text}</Button> :
-            <Button className={'gnb-btn'} theme={'button-text-point'} size={'button-none'} key={i}>{btn_text}</Button>
-        )}
+        <div className={props.className}>
+            <Button className={'gnb-btn'} theme={'button-text'} size={'button-none'} onClick={ () => window.location.assign('/') }><img src={logo} /></Button>
+            <Button className={'gnb-btn'} theme={'button-text-point'} size={'button-none'}>프로젝트</Button>
+            <Button className={'gnb-btn'} theme={'button-text'} size={'button-none'}>Toys 프로필</Button>
+            <Button className={'gnb-btn'} theme={'button-text'} size={'button-none'}>About Toyice</Button>
         </div>
     );
 }

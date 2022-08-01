@@ -1,11 +1,17 @@
 import React from 'react';
+import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
+
+import { projectType } from '../../../pages/project_main/templates';
 
 import Img from '../../atoms/img';
 
 import stone_orange from '../../../assets/svg/stone-orange.svg';
 import stone_yellow from '../../../assets/svg/stone-yellow.svg';
 import stone_blue from '../../../assets/svg/stone-blue.svg';
+import stone_orange_eye from '../../../assets/svg/stone-orange-eye.svg';
+import stone_yellow_eye from '../../../assets/svg/stone-yellow-eye.svg';
+import stone_blue_eye from '../../../assets/svg/stone-blue-eye.svg';
 
 const StyledBtnStones = styled.div`
     position: relative;
@@ -15,14 +21,22 @@ const StyledBtnStones = styled.div`
     margin-right: auto;
 `;
 
-const img_stone = () => {
+const ImgStone = () => {
+    const [type, setType] = useRecoilState(projectType);
+
+    const stoneClickHandler = (type) => setType(type);
+
+    const img_props = [{src: type === '아이디어' ? stone_orange_eye : stone_orange, className: 'img-stone orange', onClick: () => stoneClickHandler('아이디어')}, 
+                        {src: type === '서비스 개발' ? stone_blue_eye : stone_blue, className: 'img-stone blue', onClick: () => stoneClickHandler('서비스 개발')},
+                        {src: type === '시각화' ? stone_yellow_eye : stone_yellow, className: 'img-stone yellow', onClick: () => stoneClickHandler('시각화')}]
+
     return (
         <StyledBtnStones>
-            <Img src={stone_orange} className='img-stone orange' />
-            <Img src={stone_blue} className='img-stone blue' />
-            <Img src={stone_yellow} className='img-stone yellow' />
+        {img_props.map( img =>
+            <Img {...img}/>
+        )}
         </StyledBtnStones>
     );
 }
 
-export default img_stone;
+export default ImgStone;

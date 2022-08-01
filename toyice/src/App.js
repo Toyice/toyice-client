@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Project_main from "./pages/project_main/templates/index";
 import GNB from "./components/organisms/GNB";
+import ProjectMain from "./pages/project_main/templates";
+import ProjectAdd from "./pages/project_add";
+import ProjectInfo from "./pages/project_info";
 
 import './App.css';
 
@@ -13,7 +15,13 @@ function App() {
         <GNB />
         <div className="App-contents">
           <Routes>
-            <Route exact path="/" element={<Project_main/>} />
+            <Route exact path="/" element={<ProjectMain/>} />
+          </Routes>
+          <Routes>
+            <Route exact path="/create-toy" element={<ProjectAdd/>} />
+          </Routes>
+          <Routes>
+            <Route exact path="/toy/:id" element={<ProjectInfo/>} />
           </Routes>
         </div>
       </Router>

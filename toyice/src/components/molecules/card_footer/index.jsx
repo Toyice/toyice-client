@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Img from '../../atoms/img';
 import Span from '../../atoms/span';
+import Profile from '../profile';
 
 import good from '../../../assets/svg/good.svg';
 import profile_default from '../../../assets/svg/profile-default.svg';
@@ -13,12 +14,6 @@ const StyledCardFooter = styled.div`
     justify-content: space-between;
 `;
 
-const StyledCardFooter_profile = styled.div`
-    display: grid;
-    grid-template-columns: 32px auto;
-    place-items: center;
-`;
-
 const StyledCardFooter_emoticon = styled.div`
     display: flex;
     align-items: center;
@@ -26,18 +21,15 @@ const StyledCardFooter_emoticon = styled.div`
     width: 92px;
 `;
 
-const CardFooter = () => {
+const CardFooter = (props) => {
     return (
         <StyledCardFooter>
-            <StyledCardFooter_profile>
-                <Img src={profile_default} width={27} height={25}/>
-                <Span size='span-xsmall' color='span-color3'>수빈</Span>
-            </StyledCardFooter_profile>
+            <Profile src={profile_default} w={27} h={25} s={'span-xsmall'} c={'span-color3'}>수빈</Profile>
             <StyledCardFooter_emoticon>
                 <Span>😮</Span>
-                <Span size='span-xsmall' color='span-color3'>22</Span>
+                <Span size='span-xsmall' color='span-color3'>{props.view}</Span>
                 <Img src={good} />
-                <Span size='span-xsmall' color='span-color3'>40</Span>
+                <Span size='span-xsmall' color='span-color3'>{props.like}</Span>
             </StyledCardFooter_emoticon>
         </StyledCardFooter>
     );
