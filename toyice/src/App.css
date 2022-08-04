@@ -85,6 +85,16 @@ body {
     font-style: normal;
 }
 
+input::placeholder {
+    font-family: AppleSDGothicNeo;
+    font-style: normal;
+}
+
+textarea::placeholder {
+    font-family: AppleSDGothicNeo;
+    font-style: normal;
+}
+
 .App-contents {
     padding: 0px 15.6% 0px 15.6%;
 }

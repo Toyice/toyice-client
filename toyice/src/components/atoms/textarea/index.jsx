@@ -3,9 +3,9 @@ import { useCallback } from 'react';
 import './style.css';
 
 const TextArea = (props) => {
-
+    const { className, placeholder, onChange } = props;
     return (
-        <textarea className={props.className}></textarea>
+        <textarea {...props} ></textarea>
     );
 }
 

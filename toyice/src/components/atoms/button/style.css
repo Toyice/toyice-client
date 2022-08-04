@@ -10,6 +10,12 @@
     border: 0;
 }
 
+.button:disabled {
+    color: var(--color-4);
+    background-color: var(--color-3);
+    cursor: default;
+}
+
 /* size */
 .button-none {
     border: 0;
@@ -25,7 +31,8 @@
 }
 
 .button-large {
-    padding: 25px 37px;
+    width: 221px;
+    height: 60px;
 }
 
 /* theme */
@@ -78,4 +85,9 @@
     position: absolute;
     top: 19px;
     left: 93.54%;
+}
+
+.project-add-btn {
+    margin-left: auto;
+    margin-right: auto;
 }

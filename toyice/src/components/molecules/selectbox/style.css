@@ -1,0 +1,103 @@
+.selectbox {
+    display: inline-block;
+}
+
+.selectbox-active {
+    /* filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1)); */
+}
+
+.selectbox-active ul {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 1px solid #D9D9D9;
+    border-top-width: 0;
+    background-color: var(--color-4);
+    z-index: 10;
+}
+
+.selectbox-active li {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+    padding: 22px 0 23px 35px;
+    margin: 0;
+    margin-left: 0;
+    border: 1px solid #D9D9D9;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.selectbox-active li button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.selectbox-placeholder {
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-3);
+    background-color: var(--color-4);
+    border: 1px solid #D9D9D9;
+    border-radius: 30px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.selectbox-active .selectbox-placeholder-hidden {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.add-toy-selectbox .selectbox-placeholder{
+    width: 611px;
+    height: 66px;
+    padding-left: 35px;
+    padding-right: 32px;
+    box-sizing: border-box;
+}
+
+.add-toy-selectbox ul {
+    width: 609px;
+    /* height: 262px; */
+}
+
+.selectbox-ul-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.add-toy-selectbox li {
+    /* margin-left: 35px; */
+    cursor: pointer;
+}
+
+.add-toy-selectbox li #selectbox-btn-0 {
+    color: var(--color-point);
+}
+
+.add-toy-selectbox li #selectbox-btn-1 {
+    color: var(--color-yellow);
+}
+
+.add-toy-selectbox li #selectbox-btn-2 {
+    color: var(--color-blue);
+}
+
+.add-toy-selectbox #selectbox-li-2 {
+    border-bottom-width: 0;
+}
+

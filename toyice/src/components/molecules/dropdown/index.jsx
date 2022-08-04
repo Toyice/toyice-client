@@ -7,7 +7,7 @@ const Dropdown = (props) => {
     const class_props = classnames('dropdown', props.className);
 
     return (
-        <div className={class_props}>
+        <div className={class_props} onClick={props.onClick}>
             <div className='dropdown-text'>
                 {props.children}
                 <div>

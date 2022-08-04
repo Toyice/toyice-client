@@ -1,6 +1,10 @@
+import { useEffect, useRecoilState } from 'react';
+import { useSetRecoilState } from 'recoil';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { FiX } from 'react-icons/fi';
+
+import { tags } from '../../../pages/project_add';
 
 import Input from '../../atoms/input';
 import TagList from '../tag_list';
@@ -17,13 +21,19 @@ const StyledTagging = styled.div`
 
 const Tagging = () => {
     const [tag, setTag] = useState("");
-    const [tags, setTags] = useState([]);
+    const [tagList, setTagList] = useState([]);
+    const setToyTags = useSetRecoilState(tags);
+
+    useEffect(() => {
+        const newTags = tagList;
+        setToyTags(newTags);
+    }, [tagList])
 
     return (
         <StyledTagging>
-            <TagList className='tagging-tag' tags={tags} icon={<FiX stroke-width={2.5} size={16}/>} h={40}/>
-            {tags.length < 2 && 
-            <Input value={tag} setValue={setTag} setResult={setTags} placeholder={'태그를 입력해주세요.'} className='tagging-input' maxlength={5}/> }
+            <TagList className='tagging-tag' tags={tagList} setTags={setTagList} icon={<FiX stroke-width={2.5} size={16}/>} h={40}/>
+            {tagList.length < 2 && 
+            <Input value={tag} setValue={setTag} setResult={setTagList} placeholder={'태그를 입력해주세요.'} className='tagging-input add-toy-input' maxLength={5}/> }
         </StyledTagging>
     );
 }

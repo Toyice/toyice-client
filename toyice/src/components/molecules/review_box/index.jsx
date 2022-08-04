@@ -5,6 +5,7 @@ import Span from "../../atoms/span";
 
 import './style.css';
 import profile_default from '../../../assets/svg/profile-default.svg';
+import { useEffect } from "react";
 
 const StyledReviewBox = styled.div`
     display: flex;
@@ -23,6 +24,7 @@ const StyledReviewBoxText = styled.div`
 `;
 
 const ReviewBox = (props) => {
+    useEffect(() => console.log(props), []);
     return (
         <StyledReviewBox id={props.id && props.id}>
             <Img src={profile_default} width={50} height={50} />
@@ -31,7 +33,7 @@ const ReviewBox = (props) => {
                     <Span size={'span-small'}>Name</Span>
                 </div>
                 <div>
-                    <Span size={'span-small'}>{props.data.contents}</Span>
+                    <Span size={'span-small'}>{props.data.content}</Span>
                 </div>
             </StyledReviewBoxText>
         </StyledReviewBox>

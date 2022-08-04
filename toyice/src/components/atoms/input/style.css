@@ -34,12 +34,17 @@
     background: #F0F0F0;
     border: none;
     padding: 25px 0 25px 35px;
-    box-sizing : border-box;
+    box-sizing: border-box;
     color: var(--color-3);
 }
 
 .add-toy-input:focus {
-    color: var(--color-3);
+    color: var(--color-1);
+}
+
+.add-toy-active {
+    background: white;
+    border: 1px solid #D9D9D9;
 }
 
 .tagging-input {
@@ -49,7 +54,7 @@
     color: var(--color-3);
 }
 
-.tagging-input::placeholder {
+.add-toy-input::placeholder {
     font-size: var(--size-15);
     color: var(--color-3);
 }

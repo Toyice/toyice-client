@@ -1,8 +1,10 @@
 import './style.css';
 
 const Label = (props) => {
+    const { className, htmlFor } = props;
+
     return (
-        <label for={props.for}>{props.children}</label>
+        <label {...props} >{props.children}</label>
     );
 }
 

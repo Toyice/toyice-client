@@ -1,11 +1,5 @@
-import styled from 'styled-components';
-
 import AddTitle from '../add_title';
 import Tagging from '../tagging';
-
-const StyledAddTag = styled.div`
-
-`;
 
 const AddTag = () => {
     return (

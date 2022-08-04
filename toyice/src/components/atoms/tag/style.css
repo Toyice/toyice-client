@@ -24,3 +24,6 @@
 }
 
 /* className */
+.tagging-tag {
+    cursor: pointer;
+}

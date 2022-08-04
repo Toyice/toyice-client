@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useMemo, useEffect } from 'react';
-import { useRecoilValue } from 'recoil';
+import { useRecoilValue, useRecoilState } from 'recoil';
 import styled from 'styled-components';
 
 import { getApi } from '../../../state';
 import { projectType } from '../../../pages/project_main/templates';
+import { toyId } from '../../../App';
 
 import Img from '../../atoms/img';
 import Span from '../../atoms/span';
@@ -29,7 +31,9 @@ const StyledInsideCard = styled.div`
 
 const ProjectCard = () => {
     const [cards, setCards] = useState([]);
+    const [id, setId] = useRecoilState(toyId);
     const type = useRecoilValue(projectType);
+    const navigation = useNavigate();
 
     useMemo(() => {
         getApi(`/toy/list${ type && '?type=' + type }`).then( res => setCards(res) );
@@ -38,7 +42,7 @@ const ProjectCard = () => {
     return (
         <>
         {cards.map( card =>
-        <StyledCard onClick={ () => window.location.assign('/toy/1') } >
+        <StyledCard onClick={ () => { navigation(`/toy/${card.id}`, { state: { id: card.id } }); }} >
             <Img src={card.mainImage} width={'100%'} height={200} className='card-img' />
             <StyledInsideCard>
                 <div>

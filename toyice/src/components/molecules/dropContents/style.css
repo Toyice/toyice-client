@@ -1,0 +1,42 @@
+.add-toy-dropContents {
+    width: 609px;
+    height: 262px;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+    border: 1px solid var(--color-3);
+    border-radius: 30px;
+}
+
+.add-toy-dropContents div {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-3);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 579px;
+    margin-left: 15px;
+    padding: 22px 0 23px 35px;
+    box-sizing: border-box;
+    font-size: var(--size-18);
+    font-weight: 400;
+}
+
+.add-toy-dropContents #dropContents-icon {
+    padding-left: 545px;
+}
+
+.add-toy-dropContents #dropContents-0 {
+    color: var(--color-point);
+    cursor: pointer;
+}
+
+.add-toy-dropContents #dropContents-1 {
+    color: var(--color-yellow);
+    cursor: pointer;
+}
+
+.add-toy-dropContents #dropContents-2 {
+    color: var(--color-blue);
+    cursor: pointer;
+    border: 0;
+}

@@ -5,7 +5,7 @@ import classnames from 'classnames';
 import './style.css';
 
 const tag = (props) => {
-    const { children, color, bgcolor, className } = props;
+    const { children, color, bgcolor, className, onClick } = props;
     const class_props = classnames(color, bgcolor, className);
 
     const StyledTag = styled.div`
@@ -22,7 +22,7 @@ const tag = (props) => {
     `;
 
     return (
-        <StyledTag className={class_props}>{children}</StyledTag>
+        <StyledTag className={class_props} onClick={onClick && onClick}>{children}</StyledTag>
     );
 }
 

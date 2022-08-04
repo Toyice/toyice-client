@@ -17,4 +17,7 @@
 
 .project-add-body {
     padding: 36px 110px 197px 110px;
+    margin-top: 155px;
+    display: grid;
+    row-gap: 100px;
 }

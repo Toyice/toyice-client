@@ -3,20 +3,28 @@ import { NotionRenderer } from 'react-notion';
 import 'react-notion/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';
 
-const Notion = () => {
+import defaultImg from '../../../assets/png/Default_image_card.png';
+
+const Notion = ({ data }) => {
     const [response, setResponse] = useState({});
 
     useEffect( () => {
-        const NOTION_ID = 'UX-sharing-service-e54fe880c8ed4d80bcb3307183c090ca';
+        const Url = data.split('/');
+        const id = Url.at(-1)
+        const NOTION_ID = id;
+
+        console.log(Url)
 
         fetch(`https://notion-api.splitbee.io/v1/page/${NOTION_ID}`)
         .then( res => res.json() )
-        .then( res => setResponse(res) )
+        .then( res => {setResponse(res); console.log(res.error)} )
         
     }, []);
 
     return (
-        <NotionRenderer blockMap={response} fullPage={true} />
+        <>
+        { !response.error ? <NotionRenderer blockMap={response} fullPage={true} /> : <div><img src={defaultImg} style={{width: '100%'}}/></div> }
+        </>
     );
 }
 
