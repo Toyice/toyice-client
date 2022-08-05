@@ -10,6 +10,12 @@
     border: 0;
 }
 
+.button:disabled {
+    color: var(--color-4);
+    background-color: var(--color-3);
+    cursor: default;
+}
+
 /* size */
 .button-none {
     border: 0;
@@ -25,7 +31,8 @@
 }
 
 .button-large {
-    padding: 25px 37px;
+    width: 221px;
+    height: 60px;
 }
 
 /* theme */
@@ -48,6 +55,21 @@
     background-color: var(--color-point);
 }
 
+.button-review:disabled {
+    font-size: var(--size-15);
+    font-weight: var(--weight-400);
+    color: var(--color-4);
+    background-color: var(--color-3);
+    cursor: default;
+}
+
+.button-review:enabled {
+    font-size: var(--size-15);
+    font-weight: var(--weight-400);
+    color: var(--color-4);
+    background-color: var(--color-point);
+}
+
 /* className */
 .gnb-btn {
     margin-right: 62px;
@@ -57,4 +79,15 @@
     height: 60px;
     float: right;
     margin-top: 47.87px;
+}
+
+.info-review-btn {
+    position: absolute;
+    top: 19px;
+    left: 93.54%;
+}
+
+.project-add-btn {
+    margin-left: auto;
+    margin-right: auto;
 }

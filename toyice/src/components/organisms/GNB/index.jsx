@@ -1,14 +1,13 @@
-import React from 'react';
+import { memo } from 'react';
 import styled from 'styled-components';
 
 import Button_list from '../../molecules/button_list/index';
 import Img from '../../atoms/img';
 
-import logo from '../../../assets/svg/logo.svg';
 import profile_default from '../../../assets/svg/profile-default.svg';
 
 const StyledGNB = styled.div`
-    width: auto;
+    width: 100%;
     height: 64px;
     display: flex;
     justify-content: space-between;
@@ -16,15 +15,21 @@ const StyledGNB = styled.div`
     background-color: #FEFEFE;
     box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
     padding: 10px 340px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    word-break: keep-all;
 `;
 
 const GNB = () => {
     return (
         <StyledGNB>
-            <Button_list className='GNB-btn-list' data={[<img src={logo} />, '프로젝트', 'Toys 프로필', 'About Toyice']} />
+            <Button_list className='GNB-btn-list' />
             <Img className='GNB-profile' src={profile_default} height={38} width={38} />
         </StyledGNB>
     );
 }
 
-export default GNB;
+export default memo(GNB);

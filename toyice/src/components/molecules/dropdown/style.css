@@ -1,0 +1,23 @@
+.dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 30px;
+}
+
+.dropdown-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-pj-type-dropdown {
+    color: var(--color-3);
+    width: 609px;
+    height: 66px;
+}
+
+.add-pj-type-dropdown .dropdown-text {
+    width: 542px;
+}

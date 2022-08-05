@@ -16,3 +16,14 @@
 .tag-orange {
     background-color: var(--color-point);
 }
+
+.tag-grey {
+    background-color: var(--color-4);
+    color: var(--color-3);
+    border: 1px solid var(--color-3);
+}
+
+/* className */
+.tagging-tag {
+    cursor: pointer;
+}
