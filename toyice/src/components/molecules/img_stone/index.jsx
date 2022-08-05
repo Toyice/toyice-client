@@ -32,8 +32,8 @@ const ImgStone = () => {
 
     return (
         <StyledBtnStones>
-        {img_props.map( img =>
-            <Img {...img}/>
+        {img_props.map( (img, key) =>
+            <Img {...img} key={key} />
         )}
         </StyledBtnStones>
     );

@@ -20,6 +20,7 @@ const StyledGNB = styled.div`
     z-index: 99;
     top: 0;
     left: 0;
+    word-break: keep-all;
 `;
 
 const GNB = () => {

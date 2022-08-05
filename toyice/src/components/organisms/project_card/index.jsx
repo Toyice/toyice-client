@@ -41,7 +41,7 @@ const ProjectCard = () => {
 
     return (
         <>
-        {cards.map( card =>
+        {cards && cards.map( card =>
         <StyledCard onClick={ () => { navigation(`/toy/${card.id}`, { state: { id: card.id } }); }} >
             <Img src={card.mainImage} width={'100%'} height={200} className='card-img' />
             <StyledInsideCard>
