@@ -13,9 +13,7 @@ const TagList = (props) => {
     useEffect(() => {
         if(props.setTags) {
             tagClickHandler();
-            if(props.tags.length === 1) {
-                setTagState("");
-            }
+            setTagState("");
         }
     }, [tagState])
 
@@ -23,7 +21,7 @@ const TagList = (props) => {
         <div>
             {props.tags && props.tags.map( (tag, i) => 
                 tag === '아이디어' ? <Tag color='tag-color1' bgcolor='tag-orange' key={i} className={props.className}>{tag}</Tag> :
-                tag === '시각화' ? <Tag color='tag-color1' bgcolor='tag-yellow' key={i} className={props.className}>{tag}</Tag> :
+                tag === '디자인' ? <Tag color='tag-color1' bgcolor='tag-yellow' key={i} className={props.className}>{tag}</Tag> :
                 tag === '서비스 개발' ? <Tag color='tag-color1' bgcolor='tag-blue' key={i} className={props.className}>{tag}</Tag> :
                 <Tag color='tag-color1' bgcolor='tag-grey' key={i} className={props.className} h={props.h} onClick={ () => setTagState(tag) }>{tag}{props.icon && <span>&nbsp;{props.icon}</span>}</Tag>
             )}

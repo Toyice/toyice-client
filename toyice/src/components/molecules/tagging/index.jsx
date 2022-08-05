@@ -31,7 +31,7 @@ const Tagging = () => {
 
     return (
         <StyledTagging>
-            <TagList className='tagging-tag' tags={tagList} setTags={setTagList} icon={<FiX stroke-width={2.5} size={16}/>} h={40}/>
+            <TagList className='tagging-tag' tags={tagList} setTags={setTagList} icon={<FiX strokeWidth={2.5} size={16}/>} h={40}/>
             {tagList.length < 2 && 
             <Input value={tag} setValue={setTag} setResult={setTagList} placeholder={'태그를 입력해주세요.'} className='tagging-input add-toy-input' maxLength={5}/> }
         </StyledTagging>

@@ -16,7 +16,6 @@
     width: 4px;
 }
 
-
 /* 스크롤바 막대 설정*/
 .reviewbox::-webkit-scrollbar-thumb{
     display: block;

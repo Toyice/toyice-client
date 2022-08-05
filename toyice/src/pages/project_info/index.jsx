@@ -32,20 +32,22 @@ export default function Index() {
     useMemo(() => {
         if(state !== null) {
             getApi(`/toy/${state.id}`).then( res => setInfo(res) );
-            console.log(info)
+            setId(state.id)
+        } else {
+            const urlId = window.location.pathname.split('/').at(-1);
+            getApi(`/toy/${urlId}`).then( res => setInfo(res) );
+            setId(urlId);
         }
-        console.log(id, state.id)
-        setId(state.id)
     }, [state])
 
     return (
         <>
-        {info &&
+        {info && id &&
         <>
             <Header className='project-info-header' bgImg={info.mainImage} >
                 <Span size={'span-xlarge'} color={'span-color4'}>{info.title}</Span>
                 <StyledHeaderFooter>
-                    <TagList tags={[info.type].concat(info.tagList)}/>
+                    <TagList tags={info.tagList !== null ? [info.type].concat(info.tagList) : [info.type]}/>
                     <Profile src={profile_default} w={35} h={35} s={'span-small'} c={'span-color4'}>수빈</Profile>
                 </StyledHeaderFooter>
             </Header> 
@@ -54,7 +56,7 @@ export default function Index() {
                 <Notion data={info.notionUrl}/>
                 <div className='project-info-body-review'>
                     <Span size={'span-large'} color={'span-color1'}>Review</Span>
-                    <Review data={info.reviewList} id={state.id} />
+                    <Review data={info.reviewList} id={id} />
                 </div>
             </Body>
         </>

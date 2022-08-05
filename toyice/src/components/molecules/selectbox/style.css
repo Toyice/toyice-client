@@ -53,6 +53,18 @@
     box-sizing: border-box;
 }
 
+.selectbox-placeholder .orange {
+    color: var(--color-point);
+}
+
+.selectbox-placeholder .yellow {
+    color: var(--color-yellow);
+}
+
+.selectbox-placeholder .blue {
+    color: var(--color-blue);
+}
+
 .selectbox-active .selectbox-placeholder-hidden {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

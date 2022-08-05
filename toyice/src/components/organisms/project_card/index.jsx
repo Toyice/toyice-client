@@ -51,7 +51,7 @@ const ProjectCard = () => {
                 <div>
                     <Span size='span-xsmall' color='span-color3'>{card.description}</Span>
                 </div>
-                <TagList tags={[card.type].concat(card.tagList)} />
+                <TagList tags={card.tagList !== null ? [card.type].concat(card.tagList) : [card.type] } />
                 <CardFooter view={card.views} like={card.likes}/>
             </StyledInsideCard>
         </StyledCard>)}

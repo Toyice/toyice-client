@@ -28,7 +28,7 @@ const ImgStone = () => {
 
     const img_props = [{src: type === '아이디어' ? stone_orange_eye : stone_orange, className: 'img-stone orange', onClick: () => stoneClickHandler('아이디어')}, 
                         {src: type === '서비스 개발' ? stone_blue_eye : stone_blue, className: 'img-stone blue', onClick: () => stoneClickHandler('서비스 개발')},
-                        {src: type === '시각화' ? stone_yellow_eye : stone_yellow, className: 'img-stone yellow', onClick: () => stoneClickHandler('시각화')}]
+                        {src: type === '디자인' ? stone_yellow_eye : stone_yellow, className: 'img-stone yellow', onClick: () => stoneClickHandler('디자인')}]
 
     return (
         <StyledBtnStones>

@@ -47,6 +47,22 @@
     border: 1px solid #D9D9D9;
 }
 
+/* .add-toy-bad { 
+    animation-duration: 0.3s;
+    animation-name: slide;
+    animation-iteration-count: 3;
+}
+
+@keyframes slide {
+    from {
+        margin-left: 1%;
+    }
+
+    to {
+        margin-left: -1%;
+    }
+} */
+
 .tagging-input {
     background: transparent;
     border: none;

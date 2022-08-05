@@ -13,11 +13,9 @@ const Notion = ({ data }) => {
         const id = Url.at(-1)
         const NOTION_ID = id;
 
-        console.log(Url)
-
         fetch(`https://notion-api.splitbee.io/v1/page/${NOTION_ID}`)
         .then( res => res.json() )
-        .then( res => {setResponse(res); console.log(res.error)} )
+        .then( res => {setResponse(res);} )
         
     }, []);
 

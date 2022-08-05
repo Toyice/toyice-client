@@ -33,14 +33,14 @@ const Selectbox = (props) => {
     return (
         <div className={!isDrop ? class_props : `selectbox-active ${className}`} ref={selectRef}>
             <div className={!isDrop ? 'selectbox-placeholder' : 'selectbox-placeholder selectbox-placeholder-hidden' } onClick={selectClickHandler}>
-                <div>
+                <div className={toyType === "아이디어" ? 'orange' :  toyType === "디자인" ? 'yellow' : toyType === "서비스 개발" ? 'blue' : null}>
                     {!isDrop && toyType === "" ? placeholder : toyType}
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     {!isDrop ? <BiCaretDown /> : <BiCaretUp />}
                 </div>
             </div>
-            <ul className={!isDrop && 'selectbox-ul-hidden'}>
+            <ul className={!isDrop ? 'selectbox-ul-hidden' : null}>
                 {btnList.map( (btn, key) => 
                     <li key={key} id={'selectbox-li-' + key} onClick={onClick}><button key={key} id={'selectbox-btn-' + key}>{btn}</button></li>
                 )}

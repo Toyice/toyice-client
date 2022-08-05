@@ -24,7 +24,7 @@ const StyledReviewBoxText = styled.div`
 `;
 
 const ReviewBox = (props) => {
-    useEffect(() => console.log(props), []);
+    
     return (
         <StyledReviewBox id={props.id && props.id}>
             <Img src={profile_default} width={50} height={50} />

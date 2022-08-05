@@ -4,15 +4,10 @@ import classnames from 'classnames';
 
 import './style.css';
 
-const tag = (props) => {
-    const { children, color, bgcolor, className, onClick } = props;
-    const class_props = classnames(color, bgcolor, className);
-
-    const StyledTag = styled.div`
+const StyledTag = styled.div`
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        height: ${props.h ? props.h : 32}px;
         font-weight: 400;
         font-size: 15px;
         border-radius: 60px;
@@ -21,8 +16,12 @@ const tag = (props) => {
         padding: 0 13px 0 13px;
     `;
 
+const tag = (props) => {
+    const { children, color, bgcolor, className, onClick } = props;
+    const class_props = classnames(color, bgcolor, className);
+
     return (
-        <StyledTag className={class_props} onClick={onClick && onClick}>{children}</StyledTag>
+        <StyledTag className={class_props} onClick={onClick && onClick} style={{ height: props.h ? props.h : '32px' }}>{children}</StyledTag>
     );
 }
 

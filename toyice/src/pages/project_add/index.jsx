@@ -22,15 +22,15 @@ export const toyFormData = atom({ key: 'toyFormData', default: []});
 
 export default function Index() {
     const [disabled, setDisabled] = useState(true);
-    const temp =useRecoilValue(mainImage);
-    const ttitle =useRecoilValue(title);
-    const tdes =useRecoilValue(description);
-    const ttype =useRecoilValue(type);
-    const ttags =useRecoilValue(tags);
-    const tnotion =useRecoilValue(notionUrl);
+    const temp = useRecoilValue(mainImage);
+    const ttitle = useRecoilValue(title);
+    const tdes = useRecoilValue(description);
+    const ttype = useRecoilValue(type);
+    const ttags = useRecoilValue(tags);
+    const tnotion = useRecoilValue(notionUrl);
     const setTemp = useSetRecoilState(mainImage);
     
-    const addClickHandler = () => {
+    const addClickHandler = async () => {
         const Json = {
             "description": tdes,
             "notionUrl": tnotion,
@@ -38,24 +38,26 @@ export default function Index() {
             "type" : ttype,
             "tagList" : ttags
         };
-    
-        const formData = new FormData();
-        formData.append("request", new Blob([ JSON.stringify(Json) ], { type: "application/json" }));
-        formData.append("image", temp);
-        console.log(tdes, tnotion, ttitle, ttype, ttags);
 
-        const temp2 = temp;
-        temp2.append('request', new Blob([ JSON.stringify(Json) ], { type: "application/json" }));
-        setTemp(temp2);
-        const response = axios.post(`${process.env.REACT_APP_SERVER_HOST}/toy`, formData, {
+        const formData = new FormData();
+        formData.append('image', temp);
+        formData.append('request', new Blob([ JSON.stringify(Json) ], { type: "application/json" }));
+
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_HOST}/toy`, formData, {
             headers: {
               "Content-Type": 'multipart/form-data',
             },
-          }).then( res => console.log(res));
-          
-          
-          console.log(temp2.get('image'));
-       
+          }).then( res => 
+            {
+                console.log(res);
+
+                if(res.status === 200) {
+                    window.location.assign("/");
+                } else {
+                    console.log("error")
+                }
+            });
+
     }
 
     useEffect(() => {
